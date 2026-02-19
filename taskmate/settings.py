@@ -72,12 +72,9 @@ WSGI_APPLICATION = 'taskmate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+
+# Database configuration from .env file
+# Make sure all database variables are set in your .env file
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -85,9 +82,10 @@ DATABASES = {
         'USER': env('DJANGO_DB_USER'),
         'PASSWORD': env('DJANGO_DB_PASSWORD'),
         'HOST': env('DJANGO_DB_HOST'),
-        'PORT': env('DJANGO_DB_PORT'),
+        'PORT': env('DJANGO_DB_PORT', default='5432'),
     }
 }
+
 
 
 # Password validation
