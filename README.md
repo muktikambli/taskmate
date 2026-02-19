@@ -76,6 +76,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - Railway for hosting
 - All contributors and users
 
----
+## 🙏 Demo
+
+Deployed on Railway - https://thetaskmate.up.railway.app/
+Username: demo
+Password: LearnDjango@7
 
 **Note**: Make sure to keep your `.env` file secure and never commit it to version control. The `.env` file is already included in `.gitignore`.
